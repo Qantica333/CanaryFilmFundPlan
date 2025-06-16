@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación Interactiva - Canary Film Fund</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #111827; /* gray-900 */
+            color: #e5e7eb; /* gray-200 */
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%); /* teal-700 to teal-900 */
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        .content-card {
+            background-color: #1f2937; /* gray-800 */
+            border-radius: 0.75rem;
+            border: 1px solid #374151; /* gray-700 */
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(45, 212, 191, 0.2);
+        }
+        .card-title {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600;
+            color: #2dd4bf; /* teal-400 */
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        details > summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details .summary-arrow {
+            transition: transform 0.2s;
+        }
+        details[open] .summary-arrow {
+            transform: rotate(90deg);
+        }
+        .investment-highlight {
+            background-color: #1f2937; /* gray-800 */
+            border-left: 5px solid #2dd4bf; /* teal-400 */
+            border-radius: 0.5rem;
+        }
+        .timeline-item:hover .timeline-icon {
+             background-color: #2dd4bf !important;
+             color: #111827 !important;
+        }
+        .timeline-item:hover .timeline-content h3 {
+             color: #2dd4bf;
+        }
+        .role-card {
+            background-color: #374151; /* gray-700 */
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <!-- Hero Section -->
+    <header class="hero-section text-white py-20 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight">Canary Film Fund</h1>
+            <p class="mt-4 text-lg md:text-xl text-teal-100">Construyendo el futuro del cine en Canarias. Una oportunidad de inversión estratégica.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Introduction Section -->
+            <details open class="content-card">
+                <summary>
+                    <h2 class="card-title"><i data-lucide="film"></i>1. ¿Qué es Canary Film Fund?</h2>
+                    <i data-lucide="chevron-right" class="summary-arrow text-teal-400"></i>
+                </summary>
+                <div class="mt-4 pt-4 border-t border-gray-700">
+                    <p class="text-gray-300 mb-4">Canary Film Fund es un fondo de inversión audiovisual de carácter privado con sede en Santa Cruz de Tenerife. Ha sido creado con el propósito de financiar y coproducir proyectos de cine y televisión que se realicen, en su mayoría o en su totalidad, en las Islas Canarias.</p>
+                    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="font-semibold text-lg text-teal-400 mb-2">Misión</h3>
+                            <p class="text-gray-300">Impulsar el desarrollo de la industria audiovisual canaria y su proyección internacional mediante la financiación de proyectos con alto potencial artístico y comercial, promoviendo alianzas estratégicas entre productoras emergentes y consolidadas.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-teal-400 mb-2">Visión</h3>
+                            <p class="text-gray-300">Ser el fondo audiovisual privado de referencia en Canarias y una plataforma ejemplar para la inversión cultural responsable, la colaboración intergeneracional y la excelencia narrativa con impacto global.</p>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <!-- Governance Section -->
+            <details class="content-card">
+                <summary>
+                    <h2 class="card-title"><i data-lucide="users"></i>2. Estructura de Gobernanza</h2>
+                     <i data-lucide="chevron-right" class="summary-arrow text-teal-400"></i>
+                </summary>
+                <div class="mt-4 pt-4 border-t border-gray-700">
+                     <p class="text-gray-300 mb-4">Nuestra gobernanza se basa en la experiencia y la diversidad de perfiles para garantizar la máxima calidad y viabilidad de los proyectos.</p>
+                     <ul class="space-y-4 list-none text-gray-300">
+                        <li><b>Consejo Asesor:</b> Validará la estrategia y estará compuesto por: Distribuidores, agentes de venta, productores, economistas, directores, etc.</li>
+                        <li><b>Comité de Selección:</b> Evaluará y seleccionará los proyectos, e incluirá: Productores, Directores, Actores, Guionistas, Inversores y Público invitado a votar.</li>
+                        <li><b>Acceso a Proyectos:</b> Únicamente trabajamos con agencias o representantes que quieran presentar sus proyectos. También fomentamos la cooperación entre productoras emergentes y consolidadas.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Investment Opportunity Section -->
+            <div class="content-card investment-highlight">
+                 <h2 class="card-title text-teal-300"><i data-lucide="piggy-bank"></i>Oportunidad de Inversión: Financiación de la Estructura</h2>
+                <p class="text-gray-300 mb-6">Buscamos una capitalización inicial de <strong>124.000 €</strong> destinada exclusivamente a consolidar nuestra estructura operativa anual. Esta inversión es la base para construir un vehículo de inversión sólido, creíble y eficiente, capaz de atraer capital a gran escala para los proyectos audiovisuales.</p>
+                
+                <details class="mb-4">
+                    <summary class="font-semibold text-lg text-teal-400">Desglose del Gasto Operativo (124.000€ anuales) <i data-lucide="chevron-right" class="summary-arrow text-teal-400 ml-auto"></i></summary>
+                    <div class="mt-4 pt-4 border-t border-gray-700 text-gray-300 grid grid-cols-2 gap-4">
+                        <p><strong>Director/a del Fondo:</strong> 25.000 €</p>
+                        <p><strong>Coordinador/a del Proyecto 1:</strong> 20.000 €</p>
+                        <p><strong>Coordinador/a del Proyecto 2:</strong> 15.000 €</p>
+                        <p><strong>Analista Financiero:</strong> 15.000 €</p>
+                        <p><strong>Asesor Legal:</strong> 15.000 €</p>
+                        <p><strong>Coordinador/a de Operaciones:</strong> 20.000 €</p>
+                        <p class="col-span-2"><strong>Gastos Generales (Oficina, etc.):</strong> 14.000 €</p>
+                    </div>
+                </details>
+
+                <div class="mt-6 flow-root">
+                    <div class="-my-4 divide-y divide-gray-700">
+                        <div class="flex items-center space-x-4 py-4">
+                           <div class="flex-shrink-0 bg-teal-500 text-white rounded-full h-10 w-10 flex items-center justify-center"><i data-lucide="ticket"></i></div>
+                            <div>
+                                <h3 class="font-semibold text-teal-300">Ticket de Inversión Mínimo</h3>
+                                <p class="text-gray-300">Abriremos la ronda con tickets mínimos de <strong>50.000 €</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Roadmap -->
+            <div class="content-card">
+                <h2 class="card-title"><i data-lucide="map"></i>Plan de Acción: Primeros 6 Meses</h2>
+                <div class="relative mt-6">
+                    <div class="absolute left-4 top-4 h-full border-l-2 border-gray-700"></div>
+                    <div class="space-y-8">
+                        <!-- Phase 1 -->
+                        <div class="relative pl-12 timeline-item">
+                            <div class="absolute left-0 top-1 flex items-center justify-center w-8 h-8 bg-gray-700 rounded-full timeline-icon transition-colors duration-300">
+                                <i data-lucide="gantt-chart-square" class="w-4 h-4 text-teal-400"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h3 class="font-semibold text-lg text-gray-200 transition-colors duration-300">Fase 1 (Meses 1-3): Cimientos y Red de Contactos</h3>
+                                <p class="text-gray-400 mt-1">Armado de equipo legal/financiero, desarrollo de activos de marca (web, dossier) y primer contacto con la red de productores, agentes e inversores.</p>
+                            </div>
+                        </div>
+                        <!-- Phase 2 -->
+                        <div class="relative pl-12 timeline-item">
+                            <div class="absolute left-0 top-1 flex items-center justify-center w-8 h-8 bg-gray-700 rounded-full timeline-icon transition-colors duration-300">
+                               <i data-lucide="rocket" class="w-4 h-4 text-teal-400"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h3 class="font-semibold text-lg text-gray-200 transition-colors duration-300">Fase 2 (Meses 4-6): Salida a Mercado</h3>
+                                <p class="text-gray-400 mt-1">Presentación oficial del fondo a inversores seleccionados. Activación de la estrategia de comunicación y apertura de la ronda de capitalización para la estructura.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Roles Structure -->
+            <details class="content-card">
+                <summary>
+                    <h2 class="card-title"><i data-lucide="briefcase"></i>Estructura de Roles del Fondo</h2>
+                    <i data-lucide="chevron-right" class="summary-arrow text-teal-400"></i>
+                </summary>
+                <div class="mt-4 pt-4 border-t border-gray-700 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="role-card">
+                        <h4 class="font-semibold text-teal-400">Comité de selección / jurado</h4>
+                        <p class="text-sm text-gray-300 mt-1"><strong>Función:</strong> Seleccionar los proyectos a financiar (máx. 5/año).</p>
+                        <p class="text-sm text-gray-300 mt-1"><strong>Oferta:</strong> Prestigio, visibilidad, opción a producción ejecutiva, gastos cubiertos y bonus por ROI positivo.</p>
+                    </div>
+                    <div class="role-card">
+                        <h4 class="font-semibold text-teal-400">Agencias/Productoras Acreditadas</h4>
+                        <p class="text-sm text-gray-300 mt-1"><strong>Función:</strong> Únicos autorizados a presentar proyectos.</p>
+                        <p class="text-sm text-gray-300 mt-1"><strong>Oferta:</strong> Acceso preferente, apoyo logístico/fiscal, coinversión y marca de calidad.</p>
+                    </div>
+                    <div class="role-card">
+                        <h4 class="font-semibold text-teal-400">Inversores Privados (RIC/Equity)</h4>
+                        <p class="text-sm text-gray-300 mt-1"><strong>Función:</strong> Aportar capital a los proyectos.</p>
+                        <p class="text-sm text-gray-300 mt-1"><strong>Oferta:</strong> Incentivos fiscales, informe de impacto, crédito de productor y acceso exclusivo.</p>
+                    </div>
+                    <div class="role-card">
+                        <h4 class="font-semibold text-teal-400">Departamento Legal & Financiero</h4>
+                        <p class="text-sm text-gray-300 mt-1"><strong>Función:</strong> Estructurar contratos y atraer inversores.</p>
+                        <p class="text-sm text-gray-300 mt-1"><strong>Oferta:</strong> Retribución fija + variable por éxito.</p>
+                    </div>
+                     <div class="role-card">
+                        <h4 class="font-semibold text-teal-400">Agentes de Venta / Distribuidores</h4>
+                        <p class="text-sm text-gray-300 mt-1"><strong>Función:</strong> Orientar el fondo hacia el mercado.</p>
+                        <p class="text-sm text-gray-300 mt-1"><strong>Oferta:</strong> Acceso a proyectos en fase temprana.</p>
+                    </div>
+                     <div class="role-card">
+                        <h4 class="font-semibold text-teal-400">Audiencia Cinéfila (Jurado Civil)</h4>
+                        <p class="text-sm text-gray-300 mt-1"><strong>Función:</strong> Representar la visión del espectador.</p>
+                        <p class="text-sm text-gray-300 mt-1"><strong>Oferta:</strong> Pase VIP a pitchings y participación simbólica.</p>
+                    </div>
+                </div>
+            </details>
+            
+            <!-- Profitability Section -->
+            <details class="content-card">
+                <summary>
+                     <h2 class="card-title"><i data-lucide="bar-chart-2"></i>Rentabilidad para Inversores de Proyectos</h2>
+                     <i data-lucide="chevron-right" class="summary-arrow text-teal-400"></i>
+                </summary>
+                <div class="mt-4 pt-4 border-t border-gray-700">
+                     <p class="text-gray-300 mb-4">Los inversores que apuesten por nuestras películas y series participarán en un modelo de alta rentabilidad basado en los derechos de explotación de los proyectos.</p>
+                     <ul class="space-y-4 list-none text-gray-300">
+                        <li>
+                            <h4 class="font-semibold text-teal-400">Retorno Potencial</h4>
+                            <p>Proyectos con potencial de retornar hasta el <strong>150% o más</strong>, basados en casos de éxito del cine independiente.</p>
+                        </li>
+                        <li>
+                            <h4 class="font-semibold text-teal-400">Alta Rentabilidad (Tickets > 200.000€)</h4>
+                            <p>Para inversiones superiores a 200.000€ en un proyecto, se ofrecen condiciones preferentes sobre los beneficios de la explotación para maximizar el retorno.</p>
+                        </li>
+                         <li>
+                            <h4 class="font-semibold text-teal-400">Estructura de Contratos</h4>
+                            <p>Recobro preferencial (waterfall), participación en la Propiedad Intelectual y créditos como Productores Ejecutivos.</p>
+                        </li>
+                     </ul>
+                </div>
+            </details>
+            
+             <!-- CFF Return Model Section -->
+            <details class="content-card">
+                <summary>
+                     <h2 class="card-title"><i data-lucide="shield-check"></i>Modelo de Retorno para Canary Film Fund</h2>
+                     <i data-lucide="chevron-right" class="summary-arrow text-teal-400"></i>
+                </summary>
+                <div class="mt-4 pt-4 border-t border-gray-700">
+                     <p class="text-gray-300 mb-4">Para garantizar su sostenibilidad y crecimiento, el fondo establece su propio modelo de beneficio sobre cada proyecto financiado.</p>
+                     <ul class="space-y-3 list-disc list-inside text-gray-300">
+                        <li><strong>% de la Inversión Conseguida (Management Fee):</strong> Una comisión de gestión sobre el capital levantado para cada proyecto.</li>
+                        <li><strong>% de la Propiedad Intelectual (Carry):</strong> Una participación en los derechos de explotación y beneficios netos de la película o serie.</li>
+                        <li><strong>Crédito como Productor Ejecutivo:</strong> Posicionamiento y visibilidad en cada producción, reforzando la marca del fondo.</li>
+                     </ul>
+                </div>
+            </details>
+
+            <!-- Conclusion Section -->
+            <div class="content-card">
+                 <h2 class="card-title"><i data-lucide="check-circle"></i>Conclusión: Una Inversión Estratégica</h2>
+                 <p class="text-gray-300">El Canary Film Fund se posiciona como un vehículo de inversión híbrido, ágil y altamente curado. La clave de nuestro éxito reside en la curaduría experta, la anticipación a las tendencias del mercado y la creación de alianzas estratégicas. Invitamos a nuestros socios a unirse a este proyecto para capitalizar juntos la creciente industria audiovisual canaria, convirtiendo el talento local en historias de impacto global.</p>
+            </div>
+
+        </div>
+    </main>
+    
+    <footer class="bg-gray-800 text-gray-400 py-8 text-center border-t border-gray-700">
+        <p>&copy; 2024 Canary Film Fund. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
