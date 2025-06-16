@@ -76,6 +76,21 @@
             border-radius: 0.5rem;
             padding: 1rem;
         }
+        .table-like {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        .table-header {
+            font-weight: 600;
+            color: #9ca3af; /* gray-400 */
+        }
+        .table-cell {
+             color: #d1d5db; /* gray-300 */
+        }
+        .table-row {
+            display: contents; /* Allows grid layout on children */
+        }
     </style>
 </head>
 <body class="text-gray-200">
@@ -131,7 +146,7 @@
 
             <!-- Investment Opportunity Section -->
             <div class="content-card investment-highlight">
-                 <h2 class="card-title text-teal-300"><i data-lucide="piggy-bank"></i>Oportunidad de Inversión: Financiación de la Estructura</h2>
+                 <h2 class="card-title text-teal-300"><i data-lucide="piggy-bank"></i>3. Oportunidad de Inversión: Financiación de la Estructura</h2>
                 <p class="text-gray-300 mb-6">Buscamos una capitalización inicial de <strong>124.000 €</strong> destinada exclusivamente a consolidar nuestra estructura operativa anual. Esta inversión es la base para construir un vehículo de inversión sólido, creíble y eficiente, capaz de atraer capital a gran escala para los proyectos audiovisuales.</p>
                 
                 <details class="mb-4">
@@ -160,40 +175,96 @@
                 </div>
             </div>
 
-            <!-- Roadmap -->
-            <div class="content-card">
-                <h2 class="card-title"><i data-lucide="map"></i>Plan de Acción: Primeros 6 Meses</h2>
-                <div class="relative mt-6">
-                    <div class="absolute left-4 top-4 h-full border-l-2 border-gray-700"></div>
-                    <div class="space-y-8">
-                        <!-- Phase 1 -->
-                        <div class="relative pl-12 timeline-item">
-                            <div class="absolute left-0 top-1 flex items-center justify-center w-8 h-8 bg-gray-700 rounded-full timeline-icon transition-colors duration-300">
-                                <i data-lucide="gantt-chart-square" class="w-4 h-4 text-teal-400"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <h3 class="font-semibold text-lg text-gray-200 transition-colors duration-300">Fase 1 (Meses 1-3): Cimientos y Red de Contactos</h3>
-                                <p class="text-gray-400 mt-1">Armado de equipo legal/financiero, desarrollo de activos de marca (web, dossier) y primer contacto con la red de productores, agentes e inversores.</p>
-                            </div>
+            <!-- Lead Investor Role Section -->
+            <details class="content-card">
+                <summary>
+                     <h2 class="card-title"><i data-lucide="gem"></i>4. El Rol del Inversor Líder</h2>
+                     <i data-lucide="chevron-right" class="summary-arrow text-teal-400"></i>
+                </summary>
+                <div class="mt-4 pt-4 border-t border-gray-700">
+                     <p class="text-gray-300 mb-4">Para el inversor que no solo aporta capital, sino que se convierte en un socio estratégico y parte del "equipo fundador", ofrecemos un estatus preferente.</p>
+                     <div class="grid md:grid-cols-2 gap-6 mt-6">
+                        <div>
+                            <h4 class="font-semibold text-teal-400 mb-2">Beneficios Estratégicos y No Financieros</h4>
+                            <ul class="space-y-2 list-disc list-inside text-gray-300">
+                                <li>Acceso a todas las decisiones clave del fondo.</li>
+                                <li>Derecho a cofirmar la incorporación de nuevos socios.</li>
+                                <li>Participación activa en comités estratégicos.</li>
+                                <li>Visibilidad pública como “Fundador/a de CFF”.</li>
+                            </ul>
                         </div>
-                        <!-- Phase 2 -->
-                        <div class="relative pl-12 timeline-item">
-                            <div class="absolute left-0 top-1 flex items-center justify-center w-8 h-8 bg-gray-700 rounded-full timeline-icon transition-colors duration-300">
-                               <i data-lucide="rocket" class="w-4 h-4 text-teal-400"></i>
+                        <div>
+                            <h4 class="font-semibold text-teal-400 mb-2">Estructura de Retorno Preferente</h4>
+                             <ul class="space-y-2 list-disc list-inside text-gray-300">
+                                <li>Recuperación del 100% del capital inicial antes de repartir beneficios.</li>
+                                <li>Participación (“carry”) más alta en los primeros proyectos del fondo.</li>
+                            </ul>
+                        </div>
+                     </div>
+                </div>
+            </details>
+
+            <!-- Roadmap & Future Vision -->
+            <div class="content-card">
+                <h2 class="card-title"><i data-lucide="map"></i>5. Plan de Acción y Visión Futura</h2>
+                <div class="mt-4">
+                    <h3 class="font-semibold text-xl text-teal-400 mb-4">Roadmap: Primeros 6 Meses</h3>
+                     <div class="relative mt-6">
+                        <div class="absolute left-4 top-4 h-full border-l-2 border-gray-700"></div>
+                        <div class="space-y-8">
+                            <div class="relative pl-12 timeline-item">
+                                <div class="absolute left-0 top-1 flex items-center justify-center w-8 h-8 bg-gray-700 rounded-full timeline-icon transition-colors duration-300">
+                                    <i data-lucide="gantt-chart-square" class="w-4 h-4 text-teal-400"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4 class="font-semibold text-lg text-gray-200 transition-colors duration-300">Fase 1 (Meses 1-3): Cimientos y Red de Contactos</h4>
+                                    <p class="text-gray-400 mt-1">Armado de equipo legal/financiero, desarrollo de activos de marca y primer contacto con la red de productores, agentes e inversores.</p>
+                                </div>
                             </div>
-                            <div class="timeline-content">
-                                <h3 class="font-semibold text-lg text-gray-200 transition-colors duration-300">Fase 2 (Meses 4-6): Salida a Mercado</h3>
-                                <p class="text-gray-400 mt-1">Presentación oficial del fondo a inversores seleccionados. Activación de la estrategia de comunicación y apertura de la ronda de capitalización para la estructura.</p>
+                            <div class="relative pl-12 timeline-item">
+                                <div class="absolute left-0 top-1 flex items-center justify-center w-8 h-8 bg-gray-700 rounded-full timeline-icon transition-colors duration-300">
+                                   <i data-lucide="rocket" class="w-4 h-4 text-teal-400"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4 class="font-semibold text-lg text-gray-200 transition-colors duration-300">Fase 2 (Meses 4-6): Salida a Mercado</h4>
+                                    <p class="text-gray-400 mt-1">Presentación oficial del fondo, activación de la comunicación y apertura de la ronda de capitalización para la estructura.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="mt-8 pt-6 border-t border-gray-700">
+                    <h3 class="font-semibold text-xl text-teal-400 mb-4">Visión a 2 Años: Crecimiento y Expansión</h3>
+                    <p class="text-gray-300 mb-4">La capitalización inicial es el primer paso. Nuestro plan a medio plazo es convertir a Canary Film Fund en un actor principal del sector:</p>
+                    <ul class="space-y-3 list-disc list-inside text-gray-300">
+                        <li><strong>Año 2: Levantar 1M€</strong> para financiar un slate de 4-6 proyectos de mayor envergadura.</li>
+                        <li><strong>Coproducción Estratégica:</strong> Firmar acuerdos de coproducción con plataformas y cadenas de TV nacionales e internacionales.</li>
+                        <li><strong>Fondo de Equity:</strong> Evolucionar hacia un fondo de equity audiovisual más estructurado, similar a un Venture Capital, para atraer inversión institucional.</li>
+                    </ul>
+                </div>
             </div>
+
+            <!-- NEW: Local Economy Impact -->
+            <details class="content-card">
+                 <summary>
+                     <h2 class="card-title"><i data-lucide="trending-up"></i>6. Impulso a la Economía Creativa Local</h2>
+                     <i data-lucide="chevron-right" class="summary-arrow text-teal-400"></i>
+                 </summary>
+                 <div class="mt-4 pt-4 border-t border-gray-700">
+                      <p class="text-gray-300 mb-4">El fondo no solo busca rentabilidad, sino ser un motor para la economía de las Islas Canarias:</p>
+                      <ul class="space-y-3 list-disc list-inside text-gray-300">
+                         <li>Cada proyecto seleccionado contratará talento técnico y artístico local (mín. 60–70% del equipo).</li>
+                         <li>Se activarán decenas de microempresas locales: alquileres de equipos, postproducción, transporte, catering, vestuario, etc.</li>
+                         <li>Se generarán puestos de trabajo directos e indirectos y formación in situ en oficios audiovisuales.</li>
+                         <li>Potencial de crear una cadena de valor estable si el fondo crece año tras año.</li>
+                      </ul>
+                 </div>
+            </details>
             
             <!-- Roles Structure -->
             <details class="content-card">
                 <summary>
-                    <h2 class="card-title"><i data-lucide="briefcase"></i>Estructura de Roles del Fondo</h2>
+                    <h2 class="card-title"><i data-lucide="briefcase"></i>7. Estructura de Roles del Fondo</h2>
                     <i data-lucide="chevron-right" class="summary-arrow text-teal-400"></i>
                 </summary>
                 <div class="mt-4 pt-4 border-t border-gray-700 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -233,7 +304,7 @@
             <!-- Profitability Section -->
             <details class="content-card">
                 <summary>
-                     <h2 class="card-title"><i data-lucide="bar-chart-2"></i>Rentabilidad para Inversores de Proyectos</h2>
+                     <h2 class="card-title"><i data-lucide="bar-chart-2"></i>8. Rentabilidad para Inversores de Proyectos</h2>
                      <i data-lucide="chevron-right" class="summary-arrow text-teal-400"></i>
                 </summary>
                 <div class="mt-4 pt-4 border-t border-gray-700">
@@ -258,22 +329,55 @@
              <!-- CFF Return Model Section -->
             <details class="content-card">
                 <summary>
-                     <h2 class="card-title"><i data-lucide="shield-check"></i>Modelo de Retorno para Canary Film Fund</h2>
+                     <h2 class="card-title"><i data-lucide="shield-check"></i>9. Modelo de Retorno para CFF: Escenario Práctico</h2>
                      <i data-lucide="chevron-right" class="summary-arrow text-teal-400"></i>
                 </summary>
                 <div class="mt-4 pt-4 border-t border-gray-700">
-                     <p class="text-gray-300 mb-4">Para garantizar su sostenibilidad y crecimiento, el fondo establece su propio modelo de beneficio sobre cada proyecto financiado.</p>
-                     <ul class="space-y-3 list-disc list-inside text-gray-300">
-                        <li><strong>% de la Inversión Conseguida (Management Fee):</strong> Una comisión de gestión sobre el capital levantado para cada proyecto.</li>
-                        <li><strong>% de la Propiedad Intelectual (Carry):</strong> Una participación en los derechos de explotación y beneficios netos de la película o serie.</li>
-                        <li><strong>Crédito como Productor Ejecutivo:</strong> Posicionamiento y visibilidad en cada producción, reforzando la marca del fondo.</li>
-                     </ul>
+                     <p class="text-gray-300 mb-6">Para garantizar su sostenibilidad y crecimiento, el fondo establece su propio modelo de beneficio. A continuación, un ejemplo sobre un proyecto de 850.000 €.</p>
+                     
+                     <div class="mb-6">
+                        <h4 class="font-semibold text-teal-400 mb-2">Desglose de la Inversión Captada</h4>
+                        <div class="bg-gray-700 p-4 rounded-lg table-like">
+                            <div class="table-header">Tipo de Inversión</div>
+                            <div class="table-header text-right">Monto Aportado</div>
+                            <div class="table-row col-span-2 border-b border-gray-600 my-2"></div>
+                            <div class="table-cell">Inversor Equity (Privados)</div>
+                            <div class="table-cell text-right">500.000 €</div>
+                            <div class="table-cell">Inversor Fiscal (Incentivos)</div>
+                            <div class="table-cell text-right">350.000 €</div>
+                            <div class="table-row col-span-2 border-t-2 border-teal-400 mt-2 pt-2"></div>
+                            <div class="font-bold table-cell">Total Captado por CFF</div>
+                            <div class="font-bold table-cell text-right">850.000 €</div>
+                        </div>
+                     </div>
+
+                     <div>
+                        <h4 class="font-semibold text-teal-400 mb-2">Participación y Retorno para CFF (Fee de Estructuración: 10%)</h4>
+                        <div class="bg-gray-700 p-4 rounded-lg table-like">
+                            <div class="table-header">Concepto del Fee</div>
+                            <div class="table-header text-right">Monto Estimado</div>
+                             <div class="table-row col-span-2 border-b border-gray-600 my-2"></div>
+                            <div class="table-cell">Honorario por estructuración legal y fiscal</div>
+                            <div class="table-cell text-right">25.000 €</div>
+                            <div class="table-cell">Producción ejecutiva y logística</div>
+                            <div class="table-cell text-right">30.000 €</div>
+                             <div class="table-cell">Supervisión creativa y financiera</div>
+                            <div class="table-cell text-right">15.000 €</div>
+                             <div class="table-cell">Honorario de gestión de inversores</div>
+                            <div class="table-cell text-right">15.000 €</div>
+                            <div class="table-row col-span-2 border-t-2 border-teal-400 mt-2 pt-2"></div>
+                            <div class="font-bold table-cell">Total Fee para CFF</div>
+                            <div class="font-bold table-cell text-right">85.000 €</div>
+                        </div>
+                     </div>
+
+                     <p class="text-sm text-gray-400 mt-4">Adicionalmente, Canary Film Fund retiene un <strong>% de la Propiedad Intelectual (Carry)</strong> y figura con un crédito de <strong>Productor Ejecutivo</strong>, reforzando su posición y asegurando beneficios a largo plazo.</p>
                 </div>
             </details>
 
             <!-- Conclusion Section -->
             <div class="content-card">
-                 <h2 class="card-title"><i data-lucide="check-circle"></i>Conclusión: Una Inversión Estratégica</h2>
+                 <h2 class="card-title"><i data-lucide="check-circle"></i>10. Conclusión: Una Inversión Estratégica</h2>
                  <p class="text-gray-300">El Canary Film Fund se posiciona como un vehículo de inversión híbrido, ágil y altamente curado. La clave de nuestro éxito reside en la curaduría experta, la anticipación a las tendencias del mercado y la creación de alianzas estratégicas. Invitamos a nuestros socios a unirse a este proyecto para capitalizar juntos la creciente industria audiovisual canaria, convirtiendo el talento local en historias de impacto global.</p>
             </div>
 
