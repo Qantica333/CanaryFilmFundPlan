@@ -14,6 +14,7 @@
             font-family: 'Montserrat', sans-serif;
             background-color: #111827; /* gray-900 */
             color: #e5e7eb; /* gray-200 */
+            scroll-behavior: smooth;
         }
         .hero-section {
             background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%); /* teal-700 to teal-900 */
@@ -68,13 +69,18 @@
              background-color: #2dd4bf !important;
              color: #111827 !important;
         }
-        .timeline-item:hover .timeline-content h3 {
+        .timeline-item:hover .timeline-content h4 {
              color: #2dd4bf;
         }
         .role-card {
             background-color: #374151; /* gray-700 */
             border-radius: 0.5rem;
             padding: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .role-card:hover {
+            background-color: #4b5563;
+            transform: scale(1.03);
         }
         .table-like {
             display: grid;
@@ -90,6 +96,16 @@
         }
         .table-row {
             display: contents; /* Allows grid layout on children */
+        }
+        .icon-list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        .icon-list-item i {
+            flex-shrink: 0;
+            margin-top: 4px;
+            color: #2dd4bf;
         }
     </style>
 </head>
@@ -116,13 +132,19 @@
                 <div class="mt-4 pt-4 border-t border-gray-700">
                     <p class="text-gray-300 mb-4">Canary Film Fund es un fondo de inversión audiovisual de carácter privado con sede en Santa Cruz de Tenerife. Ha sido creado con el propósito de financiar y coproducir proyectos de cine y televisión que se realicen, en su mayoría o en su totalidad, en las Islas Canarias.</p>
                     <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <h3 class="font-semibold text-lg text-teal-400 mb-2">Misión</h3>
-                            <p class="text-gray-300">Impulsar el desarrollo de la industria audiovisual canaria y su proyección internacional mediante la financiación de proyectos con alto potencial artístico y comercial, promoviendo alianzas estratégicas entre productoras emergentes y consolidadas.</p>
+                        <div class="icon-list-item">
+                            <i data-lucide="target"></i>
+                            <div>
+                                <h3 class="font-semibold text-lg text-teal-400 mb-2">Misión</h3>
+                                <p class="text-gray-300">Impulsar el desarrollo de la industria audiovisual canaria y su proyección internacional mediante la financiación de proyectos con alto potencial artístico y comercial, promoviendo alianzas estratégicas entre productoras emergentes y consolidadas.</p>
+                            </div>
                         </div>
-                        <div>
-                            <h3 class="font-semibold text-lg text-teal-400 mb-2">Visión</h3>
-                            <p class="text-gray-300">Ser el fondo audiovisual privado de referencia en Canarias y una plataforma ejemplar para la inversión cultural responsable, la colaboración intergeneracional y la excelencia narrativa con impacto global.</p>
+                        <div class="icon-list-item">
+                            <i data-lucide="eye"></i>
+                            <div>
+                                <h3 class="font-semibold text-lg text-teal-400 mb-2">Visión</h3>
+                                <p class="text-gray-300">Ser el fondo audiovisual privado de referencia en Canarias y una plataforma ejemplar para la inversión cultural responsable, la colaboración intergeneracional y la excelencia narrativa con impacto global.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -131,15 +153,15 @@
             <!-- Governance Section -->
             <details class="content-card">
                 <summary>
-                    <h2 class="card-title"><i data-lucide="users"></i>2. Estructura de Gobernanza</h2>
+                    <h2 class="card-title"><i data-lucide="library-big"></i>2. Estructura de Gobernanza</h2>
                      <i data-lucide="chevron-right" class="summary-arrow text-teal-400"></i>
                 </summary>
                 <div class="mt-4 pt-4 border-t border-gray-700">
                      <p class="text-gray-300 mb-4">Nuestra gobernanza se basa en la experiencia y la diversidad de perfiles para garantizar la máxima calidad y viabilidad de los proyectos.</p>
                      <ul class="space-y-4 list-none text-gray-300">
-                        <li><b>Consejo Asesor:</b> Validará la estrategia y estará compuesto por: Distribuidores, agentes de venta, productores, economistas, directores, etc.</li>
-                        <li><b>Comité de Selección:</b> Evaluará y seleccionará los proyectos, e incluirá: Productores, Directores, Actores, Guionistas, Inversores y Público invitado a votar.</li>
-                        <li><b>Acceso a Proyectos:</b> Únicamente trabajamos con agencias o representantes que quieran presentar sus proyectos. También fomentamos la cooperación entre productoras emergentes y consolidadas.</li>
+                        <li class="icon-list-item"><i data-lucide="shield"></i><b>Consejo Asesor:</b> Validará la estrategia y estará compuesto por: Distribuidores, agentes de venta, productores, economistas, directores, etc.</li>
+                        <li class="icon-list-item"><i data-lucide="users"></i><b>Comité de Selección:</b> Evaluará y seleccionará los proyectos, e incluirá: Productores, Directores, Actores, Guionistas, Inversores y Público invitado a votar.</li>
+                        <li class="icon-list-item"><i data-lucide="handshake"></i><b>Acceso a Proyectos:</b> Únicamente trabajamos con agencias o representantes que quieran presentar sus proyectos. También fomentamos la cooperación entre productoras emergentes y consolidadas.</li>
                     </ul>
                 </div>
             </details>
@@ -147,7 +169,7 @@
             <!-- Investment Opportunity Section -->
             <div class="content-card investment-highlight">
                  <h2 class="card-title text-teal-300"><i data-lucide="piggy-bank"></i>3. Oportunidad de Inversión: Financiación de la Estructura</h2>
-                <p class="text-gray-300 mb-6">Buscamos una capitalización inicial de <strong>124.000 €</strong> destinada exclusivamente a consolidar nuestra estructura operativa anual. Esta inversión es la base para construir un vehículo de inversión sólido, creíble y eficiente, capaz de atraer capital a gran escala para los proyectos audiovisuales.</p>
+                <p class="text-gray-300 mb-6">Buscamos una capitalización inicial de <strong class="text-2xl text-teal-300 animated-counter" data-target="124000">0 €</strong> destinada exclusivamente a consolidar nuestra estructura operativa anual. Esta inversión es la base para construir un vehículo de inversión sólido, creíble y eficiente, capaz de atraer capital a gran escala para los proyectos audiovisuales.</p>
                 
                 <details class="mb-4">
                     <summary class="font-semibold text-lg text-teal-400">Desglose del Gasto Operativo (124.000€ anuales) <i data-lucide="chevron-right" class="summary-arrow text-teal-400 ml-auto"></i></summary>
@@ -161,18 +183,6 @@
                         <p class="col-span-2"><strong>Gastos Generales (Oficina, etc.):</strong> 14.000 €</p>
                     </div>
                 </details>
-
-                <div class="mt-6 flow-root">
-                    <div class="-my-4 divide-y divide-gray-700">
-                        <div class="flex items-center space-x-4 py-4">
-                           <div class="flex-shrink-0 bg-teal-500 text-white rounded-full h-10 w-10 flex items-center justify-center"><i data-lucide="ticket"></i></div>
-                            <div>
-                                <h3 class="font-semibold text-teal-300">Ticket de Inversión Mínimo</h3>
-                                <p class="text-gray-300">Abriremos la ronda con tickets mínimos de <strong>50.000 €</strong>.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- Lead Investor Role Section -->
@@ -182,22 +192,22 @@
                      <i data-lucide="chevron-right" class="summary-arrow text-teal-400"></i>
                 </summary>
                 <div class="mt-4 pt-4 border-t border-gray-700">
-                     <p class="text-gray-300 mb-4">Para el inversor que no solo aporta capital, sino que se convierte en un socio estratégico y parte del "equipo fundador", ofrecemos un estatus preferente.</p>
+                     <p class="text-gray-300 mb-4">Para el inversor que no solo aporta capital para la estructura, sino que se convierte en un socio estratégico y parte del "equipo fundador", ofrecemos un estatus preferente.</p>
                      <div class="grid md:grid-cols-2 gap-6 mt-6">
                         <div>
                             <h4 class="font-semibold text-teal-400 mb-2">Beneficios Estratégicos y No Financieros</h4>
-                            <ul class="space-y-2 list-disc list-inside text-gray-300">
-                                <li>Acceso a todas las decisiones clave del fondo.</li>
-                                <li>Derecho a cofirmar la incorporación de nuevos socios.</li>
-                                <li>Participación activa en comités estratégicos.</li>
-                                <li>Visibilidad pública como “Fundador/a de CFF”.</li>
+                            <ul class="space-y-3 list-none text-gray-300">
+                                <li class="icon-list-item"><i data-lucide="key-round"></i>Acceso a todas las decisiones clave del fondo.</li>
+                                <li class="icon-list-item"><i data-lucide="check-square"></i>Derecho a cofirmar la incorporación de nuevos socios.</li>
+                                <li class="icon-list-item"><i data-lucide="briefcase"></i>Participación activa en comités estratégicos.</li>
+                                <li class="icon-list-item"><i data-lucide="award"></i>Visibilidad pública como “Fundador/a de CFF”.</li>
                             </ul>
                         </div>
                         <div>
                             <h4 class="font-semibold text-teal-400 mb-2">Estructura de Retorno Preferente</h4>
-                             <ul class="space-y-2 list-disc list-inside text-gray-300">
-                                <li>Recuperación del 100% del capital inicial antes de repartir beneficios.</li>
-                                <li>Participación (“carry”) más alta en los primeros proyectos del fondo.</li>
+                             <ul class="space-y-3 list-none text-gray-300">
+                                <li class="icon-list-item"><i data-lucide="coins"></i>Recuperación del 100% del capital inicial antes de repartir beneficios.</li>
+                                <li class="icon-list-item"><i data-lucide="pie-chart"></i>Participación (“carry”) más alta en los primeros proyectos del fondo.</li>
                             </ul>
                         </div>
                      </div>
@@ -236,10 +246,10 @@
                 <div class="mt-8 pt-6 border-t border-gray-700">
                     <h3 class="font-semibold text-xl text-teal-400 mb-4">Visión a 2 Años: Crecimiento y Expansión</h3>
                     <p class="text-gray-300 mb-4">La capitalización inicial es el primer paso. Nuestro plan a medio plazo es convertir a Canary Film Fund en un actor principal del sector:</p>
-                    <ul class="space-y-3 list-disc list-inside text-gray-300">
-                        <li><strong>Año 2: Levantar 1M€</strong> para financiar un slate de 4-6 proyectos de mayor envergadura.</li>
-                        <li><strong>Coproducción Estratégica:</strong> Firmar acuerdos de coproducción con plataformas y cadenas de TV nacionales e internacionales.</li>
-                        <li><strong>Fondo de Equity:</strong> Evolucionar hacia un fondo de equity audiovisual más estructurado, similar a un Venture Capital, para atraer inversión institucional.</li>
+                    <ul class="space-y-3 list-none text-gray-300">
+                        <li class="icon-list-item"><i data-lucide="line-chart"></i><strong>Año 2: Levantar 1M€</strong> para financiar un slate de 4-6 proyectos de mayor envergadura.</li>
+                        <li class="icon-list-item"><i data-lucide="tv"></i><strong>Coproducción Estratégica:</strong> Firmar acuerdos de coproducción con plataformas y cadenas de TV.</li>
+                        <li class="icon-list-item"><i data-lucide="building-2"></i><strong>Fondo de Equity:</strong> Evolucionar hacia un fondo de equity audiovisual más estructurado, similar a un Venture Capital.</li>
                     </ul>
                 </div>
             </div>
@@ -247,16 +257,16 @@
             <!-- NEW: Local Economy Impact -->
             <details class="content-card">
                  <summary>
-                     <h2 class="card-title"><i data-lucide="trending-up"></i>6. Impulso a la Economía Creativa Local</h2>
+                     <h2 class="card-title"><i data-lucide="sprout"></i>6. Impulso a la Economía Creativa Local</h2>
                      <i data-lucide="chevron-right" class="summary-arrow text-teal-400"></i>
                  </summary>
                  <div class="mt-4 pt-4 border-t border-gray-700">
                       <p class="text-gray-300 mb-4">El fondo no solo busca rentabilidad, sino ser un motor para la economía de las Islas Canarias:</p>
-                      <ul class="space-y-3 list-disc list-inside text-gray-300">
-                         <li>Cada proyecto seleccionado contratará talento técnico y artístico local (mín. 60–70% del equipo).</li>
-                         <li>Se activarán decenas de microempresas locales: alquileres de equipos, postproducción, transporte, catering, vestuario, etc.</li>
-                         <li>Se generarán puestos de trabajo directos e indirectos y formación in situ en oficios audiovisuales.</li>
-                         <li>Potencial de crear una cadena de valor estable si el fondo crece año tras año.</li>
+                      <ul class="space-y-3 list-none text-gray-300">
+                         <li class="icon-list-item"><i data-lucide="user-check"></i>Cada proyecto seleccionado contratará talento técnico y artístico local (mín. 60–70% del equipo).</li>
+                         <li class="icon-list-item"><i data-lucide="truck"></i>Se activarán decenas de microempresas locales: alquileres, postproducción, transporte, catering, etc.</li>
+                         <li class="icon-list-item"><i data-lucide="briefcase"></i>Se generarán puestos de trabajo directos e indirectos y formación in situ en oficios audiovisuales.</li>
+                         <li class="icon-list-item"><i data-lucide="recycle"></i>Potencial de crear una cadena de valor estable si el fondo crece año tras año.</li>
                       </ul>
                  </div>
             </details>
@@ -264,7 +274,7 @@
             <!-- Roles Structure -->
             <details class="content-card">
                 <summary>
-                    <h2 class="card-title"><i data-lucide="briefcase"></i>7. Estructura de Roles del Fondo</h2>
+                    <h2 class="card-title"><i data-lucide="clipboard-user"></i>7. Estructura de Roles del Fondo</h2>
                     <i data-lucide="chevron-right" class="summary-arrow text-teal-400"></i>
                 </summary>
                 <div class="mt-4 pt-4 border-t border-gray-700 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -310,17 +320,29 @@
                 <div class="mt-4 pt-4 border-t border-gray-700">
                      <p class="text-gray-300 mb-4">Los inversores que apuesten por nuestras películas y series participarán en un modelo de alta rentabilidad basado en los derechos de explotación de los proyectos.</p>
                      <ul class="space-y-4 list-none text-gray-300">
-                        <li>
-                            <h4 class="font-semibold text-teal-400">Retorno Potencial</h4>
-                            <p>Proyectos con potencial de retornar hasta el <strong>150% o más</strong>, basados en casos de éxito del cine independiente.</p>
+                        <li class="icon-list-item"><i data-lucide="ticket"></i>
+                            <div>
+                                <h4 class="font-semibold text-teal-400">Ticket de Inversión Mínimo por Proyecto</h4>
+                                <p>La participación en los proyectos se abre con tickets de inversión a partir de <strong>50.000 €</strong>.</p>
+                            </div>
                         </li>
-                        <li>
-                            <h4 class="font-semibold text-teal-400">Alta Rentabilidad (Tickets > 200.000€)</h4>
-                            <p>Para inversiones superiores a 200.000€ en un proyecto, se ofrecen condiciones preferentes sobre los beneficios de la explotación para maximizar el retorno.</p>
+                        <li class="icon-list-item"><i data-lucide="dollar-sign"></i>
+                            <div>
+                                <h4 class="font-semibold text-teal-400">Retorno Potencial</h4>
+                                <p>Proyectos con potencial de retornar hasta el <strong>150% o más</strong>, basados en casos de éxito del cine independiente.</p>
+                            </div>
                         </li>
-                         <li>
-                            <h4 class="font-semibold text-teal-400">Estructura de Contratos</h4>
-                            <p>Recobro preferencial (waterfall), participación en la Propiedad Intelectual y créditos como Productores Ejecutivos.</p>
+                        <li class="icon-list-item"><i data-lucide="star"></i>
+                            <div>
+                                <h4 class="font-semibold text-teal-400">Alta Rentabilidad (Tickets > 200.000€)</h4>
+                                <p>Para inversiones superiores a 200.000€ en un proyecto, se ofrecen condiciones preferentes sobre los beneficios de la explotación para maximizar el retorno.</p>
+                            </div>
+                        </li>
+                         <li class="icon-list-item"><i data-lucide="file-text"></i>
+                            <div>
+                                <h4 class="font-semibold text-teal-400">Estructura de Contratos</h4>
+                                <p>Recobro preferencial (waterfall), participación en la Propiedad Intelectual y créditos como Productores Ejecutivos.</p>
+                            </div>
                         </li>
                      </ul>
                 </div>
@@ -367,7 +389,7 @@
                             <div class="table-cell text-right">15.000 €</div>
                             <div class="table-row col-span-2 border-t-2 border-teal-400 mt-2 pt-2"></div>
                             <div class="font-bold table-cell">Total Fee para CFF</div>
-                            <div class="font-bold table-cell text-right">85.000 €</div>
+                            <div class="font-bold table-cell text-right text-xl text-teal-300 animated-counter" data-target="85000">0 €</div>
                         </div>
                      </div>
 
@@ -385,11 +407,45 @@
     </main>
     
     <footer class="bg-gray-800 text-gray-400 py-8 text-center border-t border-gray-700">
-        <p>&copy; 2025 Canary Film Fund. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Canary Film Fund. Todos los derechos reservados.</p>
     </footer>
 
     <script>
         lucide.createIcons();
+
+        // Animated Counter
+        const animateCounter = (el) => {
+            const target = +el.getAttribute('data-target');
+            const duration = 1500; // 1.5 seconds
+            const frameDuration = 1000 / 60; // 60fps
+            const totalFrames = Math.round(duration / frameDuration);
+            let frame = 0;
+            
+            const counter = setInterval(() => {
+                frame++;
+                const progress = frame / totalFrames;
+                const current = Math.round(target * progress);
+                el.innerText = current.toLocaleString('es-ES') + ' €';
+
+                if (frame === totalFrames) {
+                    clearInterval(counter);
+                }
+            }, frameDuration);
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.animated-counter').forEach(counter => {
+            observer.observe(counter);
+        });
+
     </script>
 </body>
 </html>
